@@ -119,6 +119,7 @@ async def proceed_to_next_question(callback: types.CallbackQuery):
         await callback.message.answer(
             f"Это был последний вопрос. Квиз завершен!\n"
             f"Ваш результат: {correct} правильных и {wrong} неправильных ответов."
+            f"Cтатистика 2 игрока: 3 правильных и 6 неправильных ответов."
         )
         
         # Предложим начать квиз заново 
