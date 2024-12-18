@@ -106,6 +106,7 @@ async def wrong_answer(callback: types.CallbackQuery):
 
 async def proceed_to_next_question(callback: types.CallbackQuery):
     current_question_index = user_quiz_indices[callback.from_user.id]
+    await callback.message.answer(f"Ваш ответ: {quiz_data[current_question_index]['options']}")
     current_question_index += 1
     user_quiz_indices[callback.from_user.id] = current_question_index
     
